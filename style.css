@@ -1,0 +1,38 @@
+:root {
+  --columns: 16;
+  --rows: 16;
+  --grid-height: 0;
+  --form-margin-bottom: 40px;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.2;
+}
+
+*,
+*::before,
+*::after { box-sizing: inherit; }
+
+body,
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.form { margin-bottom: var(--form-margin-bottom); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(auto, 960px));
+  grid-template-rows: repeat(var(--rows), minmax(auto, var(--grid-height)));
+  justify-content: center;
+  height: var(--grid-height);
+  margin: 0 10px;
+}
