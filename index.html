@@ -15,8 +15,12 @@
   <main class="main">
     <div class="form" id="form">
       <label for="value-grid">Enter a number from 1 to 100:</label>
-      <input id="value-grid" name="value-grid" type="number" min="1" max="100">
-      <button aria-label="Enter button" type="button">Enter</button>
+      <input class="value-grid" id="value-grid" name="value-grid"
+              aria-label="Enter a number" type="number">
+      <button id="btn-enter" aria-label="Enter button"
+              type="button">Enter</button>
+      <button id="btn-reset" aria-label="Reset button"
+              type="button">Reset</button>
     </div>
     <div class="grid" id="grid"></div>
   </main>

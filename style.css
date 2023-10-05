@@ -1,8 +1,8 @@
 :root {
-  --columns: 16;
-  --rows: 16;
+  --columns: 1;
+  --rows: 1;
   --grid-height: 0;
-  --form-margin-bottom: 40px;
+  --form-margin-bottom: 30px;
 }
 
 html {
@@ -24,9 +24,13 @@ body,
 body {
   max-width: 960px;
   margin: 0 auto;
+  background-color: #fff;
 }
 
+button { cursor: pointer; }
+
 .form { margin-bottom: var(--form-margin-bottom); }
+.value-grid { width: 74px; }
 
 .grid {
   display: grid;
@@ -35,4 +39,7 @@ body {
   justify-content: center;
   height: var(--grid-height);
   margin: 0 10px;
+  border: 2px solid #000;
+  border-radius: 10px;
 }
+.grid > div { border: 1px solid #00000010; }
