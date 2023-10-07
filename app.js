@@ -48,6 +48,9 @@ function App() {
       if (target.id === 'btn-enter') createGrid();
       if (target.id === 'btn-clear') clearGrid();
     });
+    input.addEventListener('keydown', (event) => {
+      if (event.keyCode === 13) createGrid();
+    });
 
     function clearGrid() {
       const divs = grid.children;
@@ -55,9 +58,10 @@ function App() {
     }
 
     function createGrid() {
-      const value = input.value;
+      let value = input.value;
       if (value >= 1 && value <= 100) {
         grid.innerHTML = '';
+        value = Math.round(value);
         changeVariablesValue(value);
         pushDivs(value);
         input.value = '';
