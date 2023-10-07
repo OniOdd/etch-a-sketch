@@ -45,11 +45,15 @@ function App() {
   function setGrid() {
     form.addEventListener('click', (event) => {
       const target = event.target;
+      event.preventDefault();
       if (target.id === 'btn-enter') createGrid();
       if (target.id === 'btn-clear') clearGrid();
     });
     input.addEventListener('keydown', (event) => {
-      if (event.keyCode === 13) createGrid();
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        createGrid();
+      }
     });
 
     function clearGrid() {
