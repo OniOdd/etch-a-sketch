@@ -3,6 +3,7 @@
   --rows: 1;
   --grid-height: 0;
   --form-margin-bottom: 30px;
+  --grid-margin-bottom: 30px;
 }
 
 html {
@@ -38,8 +39,11 @@ button { cursor: pointer; }
   grid-template-rows: repeat(var(--rows), minmax(auto, var(--grid-height)));
   justify-content: center;
   height: var(--grid-height);
-  margin: 0 10px;
+  margin: 0 10px var(--grid-margin-bottom);
   border: 2px solid #000;
   border-radius: 10px;
 }
-.grid > div { border: 1px solid #00000010; }
+.grid > div {
+  border: 1px solid #00000010;
+  cursor: crosshair;
+}
